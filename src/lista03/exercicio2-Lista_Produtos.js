@@ -9,14 +9,24 @@
 
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
-export default function Lista01() {
+export default function Exercicio002() {
+  const produtos = [
+    {id: 1, nome: "Camiseta", preco: 49.90},
+    {id: 2, nome: "Calça", preco: 89.90},
+    {id: 3, nome: "Tênis", preco: 199.90}
+  ]
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.titulo}>Lista 01 - Victória Marques</Text>
+      <Text style={styles.titulo}>Lista 03 - Victória Marques</Text>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 1 - </Text>
-        {/* TODO: sua resposta aqui */}
+        <Text style={styles.label}>Exercício 2 - Lista dos produtos </Text>
+
+        {produtos.map((produto) => {
+          <Text key={produto.id}>
+            {produto.nome} - {produto.preco}
+          </Text>
+        })}
       </View>
     </ScrollView>
   );

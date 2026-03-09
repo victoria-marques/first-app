@@ -5,14 +5,20 @@
 
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
-export default function Lista01() {
+export default function Exercicio003() {
+  const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Lista 01 - SeuNome</Text>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 1 - View com Text</Text>
-        {/* TODO: sua resposta aqui */}
+        <Text style={styles.label}>Exercício 3 - Lista de numeros</Text>
+        {numeros.filter((numero) => numero % 2 == 0).map((numero) => {
+          <Text key={numero}>
+            {numero}
+          </Text>
+        })}
       </View>
     </ScrollView>
   );

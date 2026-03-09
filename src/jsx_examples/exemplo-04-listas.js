@@ -23,6 +23,7 @@ export default function Exemplo04() {
 
       <View style={styles.exemplo}>
     <Text style={styles.subtitulo}>Map em Objeto</Text>
+    
         {alunos.map((aluno) =>(
             <Text key={aluno.id}>
                 {aluno.nome} - {aluno.nota}
