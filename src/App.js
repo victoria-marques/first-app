@@ -1,31 +1,14 @@
-import { StyleSheet, View } from 'react-native';
-// import ExercicioCaixasLinha2 from './views_flexbox_lista/tres_caixas_linha2';
-// import ExercicioDuasColunas5 from './views_flexbox_lista/layout_duas_colunas5';
-// import ExercicioSpaceBetween3 from './views_flexbox_lista/espaçamento_spacebetween3';
-// import ExercicioCaixaCentraliza4 from './views_flexbox_lista/caixa_centralizada4';
-// import ExercicioHeaderFooter6 from './views_flexbox_lista/header_conteudo_footer6';
-// import GradesAssimetricas1 from './avaliacao_pratica/layout_grades_assimétricas';
-// import PainelDivisor2 from './avaliacao_pratica/painel_divisor_destacado';
-// import CartaoPerfil from './basic_components/props/exemplo1';
-// import CardProduto from './basic_components/props/exercício01';
-// import Saudacao from './basic_components/props/exercício03';
-// import PerfilAluno from './basic_components/props/exercício04';
-// import ContadorExample from './hooks/useState_example';
-// import TelaDeLogin from './hooks/useRef_example';
-// import TelaMoeda from './hooks/useEffect_example';
-// import Recados from './hooks/exercicio1';
-import FormularioExemplos from './text_input/formulario';
-import FlatListExemplo from './flat_list/flatlist';
+import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native"
 
-
-
-
+import StackNavigator from './navigation/exemplos/stack_navigator';
+import HomeScreen from './navigation/screens/HomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <FlatListExemplo />
-    </View>
+  <NavigationContainer>
+    <StackNavigator />
+  </NavigationContainer>
 
   );
 }
