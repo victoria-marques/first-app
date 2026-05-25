@@ -3,11 +3,13 @@ import { NavigationContainer } from "@react-navigation/native"
 
 import StackNavigator from './navigation/exemplos/stack_navigator';
 import HomeScreen from './navigation/screens/HomeScreen';
+import BottomTabNavigator from './navigation/exemplos/bottom_tab_navigator';
+import DrawerNavigator from './navigation/exemplos/drawer_navigation';
 
 export default function App() {
   return (
   <NavigationContainer>
-    <StackNavigator />
+    <DrawerNavigator/>
   </NavigationContainer>
 
   );
