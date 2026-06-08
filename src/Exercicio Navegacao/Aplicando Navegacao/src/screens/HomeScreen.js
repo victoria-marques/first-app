@@ -74,7 +74,7 @@ export default function HomeScreen({ navigation }) {
   const [jogosFiltrados, setJogosFiltrados] = useState(jogos)
   useEffect(() =>{
     const resultado = jogos.filter((jogo) =>
-      jogo.titulo.toLowerCase().includes(busca,toLowerCase()
+      jogo.titulo.toLowerCase().includes(busca,toLowerCase(),
       setJogosFiltrados(resultado)
     )
   )

@@ -31,7 +31,7 @@ export default function ListaScreen({ route }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        {/* TODO: renomeie o titulo para o seu tema */}
+        
         <Text style={styles.headerTitulo}>Minha Lista</Text>
       </View>
 
@@ -39,16 +39,15 @@ export default function ListaScreen({ route }) {
         data={itensSalvos}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          // TODO: crie o arquivo src/components/CardJogo.js
-          // O componente CardJogo deve receber as props: titulo, genero, plataforma e nota
-          // Depois substitua este bloco por:
-          // <CardJogo titulo={item.titulo} genero={item.genero} plataforma={item.plataforma} nota={item.nota} />
+      
+          <CardJogo titulo={item.titulo} genero={item.genero} plataforma={item.plataforma} nota={item.nota} />,
+
           <View style={styles.card} />
         )}
         ListEmptyComponent={
           <View style={styles.conteudo}>
             <View style={styles.iconeContainer}>
-              {/* TODO: troque pela inicial do seu tema */}
+          
               <Text style={styles.icone}>G</Text>
             </View>
             <Text style={styles.titulo}>Nenhum jogo salvo</Text>
@@ -64,7 +63,6 @@ export default function ListaScreen({ route }) {
   );
 }
 
-// TODO: ajuste as cores para o tema do seu app
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -33,7 +33,7 @@ export default function DetalheScreen({ route, navigation }) {
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.hero}>
-          {/* TODO: substituir pela inicial do titulo ou outro elemento do seu tema */}
+          
           <View style={styles.heroIcone}>
             <Text style={styles.heroIconeTexto}>{titulo[0]}</Text>
           </View>
@@ -57,19 +57,16 @@ export default function DetalheScreen({ route, navigation }) {
           <Text style={styles.detalheTexto}>{sinopse}</Text>
         </View>
 
-        {/* TODO: quando implementar o estado isSalvo, use:
-            onPress={() => setIsSalvo(prev => !prev)}
-            style={[styles.botao, isSalvo && styles.botaoAtivo]}
-            texto: isSalvo ? 'Remover da Lista' : 'Adicionar a Lista' */}
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.botaoTexto}>Adicionar a Lista</Text>
+        <TouchableOpacity
+          onPress={() => setIsSalvo(prev => !prev)}
+          style={[styles.botao, isSalvo && styles.botaoAtivo]}>
+          <Text style={styles.botaoTexto}, {isSalvo ? 'Remover da Lista' : 'Adicionar a Lista'}/>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-// TODO: estilizar com as cores e identidade visual do seu tema
 const styles = StyleSheet.create({
   container: {
     flex: 1,

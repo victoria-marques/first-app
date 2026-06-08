@@ -1,4 +1,4 @@
-// TODO: escolher um tema e personalizar os dados e estilizacao desta tela
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -15,17 +15,17 @@ export default function PerfilScreen() {
       </View>
 
       <View style={styles.cartao}>
-        {/* TODO: personalizar o avatar com a inicial do nome do usuario */}
+       
         <View style={styles.avatar}>
           <Text style={styles.avatarTexto}>U</Text>
         </View>
-        {/* TODO: personalizar nome e e-mail */}
+      
         <Text style={styles.nome}>Nome do Usuario</Text>
         <Text style={styles.email}>usuario@email.com</Text>
 
         <View style={styles.separador} />
 
-        {/* TODO: substituir pelas estatisticas que fazem sentido no seu tema */}
+        
         <View style={styles.infoLinha}>
           <Text style={styles.infoLabel}>Itens salvos</Text>
           <Text style={styles.infoValor}>0</Text>
@@ -40,7 +40,6 @@ export default function PerfilScreen() {
         </View>
       </View>
 
-      {/* TODO: mudar o texto do botao para o contexto do seu tema */}
       <TouchableOpacity style={styles.botao}>
         <Text style={styles.botaoTexto}>Editar perfil</Text>
       </TouchableOpacity>
@@ -48,7 +47,6 @@ export default function PerfilScreen() {
   );
 }
 
-// TODO: estilizar com as cores e identidade visual do seu tema
 const styles = StyleSheet.create({
   container: {
     flex: 1,
